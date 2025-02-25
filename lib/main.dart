@@ -1,3 +1,4 @@
+import 'package:advance_ui/body.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
@@ -13,21 +14,6 @@ class Lab06AdvanceUI extends StatelessWidget {
     return MaterialApp(
         title: "Advance Flutter UI",
         home: Scaffold(
-          bottomNavigationBar: BottomNavigationBar(items: [
-            BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.account_tree,
-                  size: 25,
-                  color: Colors.greenAccent,
-                ),
-                label: "Tree"),
-            BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.account_tree,
-                  size: 25,
-                  color: Colors.greenAccent,
-                ),label: "Tree"),
-          ]),
           drawer: Drawer(
             child: ListView(
               children: [
@@ -63,24 +49,7 @@ class Lab06AdvanceUI extends StatelessWidget {
           appBar: AppBar(
             title: Text("ADvance UI"),
           ),
-          body: SingleChildScrollView(
-            child: Column(
-              children: [
-                CachedNetworkImage(
-                  imageUrl:
-                      "https://plus.unsplash.com/premium_photo-1683910767532-3a25b821f7ae?q=80&w=2008&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                  placeholder: (context, url) => CircularProgressIndicator(),
-                  errorWidget: (context, url, error) => Icon(Icons.error),
-                ),
-                CachedNetworkImage(
-                  imageUrl:
-                      "https://images.unsplash.com/photo-1626808642875-0aa545482dfb?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                  placeholder: (context, url) => CircularProgressIndicator(),
-                  errorWidget: (context, url, error) => Icon(Icons.error),
-                ),
-              ],
-            ),
-          ),
+          body: AppBody(),
         ));
   }
 }
