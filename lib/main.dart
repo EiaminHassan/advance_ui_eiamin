@@ -16,6 +16,13 @@ class Lab06AdvanceUI extends StatelessWidget {
           drawer: Drawer(
             child: ListView(
               children: [
+                DrawerHeader(child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(Icons.settings,size: 25,color: Colors.black,),
+                    Icon(Icons.access_alarm_sharp,size: 25,color: Colors.blueAccent,)
+                  ],
+                )),
                 ListTile(
                   leading: Icon(Icons.image),
                   title: Text("Images"),
