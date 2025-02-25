@@ -13,14 +13,38 @@ class Lab06AdvanceUI extends StatelessWidget {
     return MaterialApp(
         title: "Advance Flutter UI",
         home: Scaffold(
+          bottomNavigationBar: BottomNavigationBar(items: [
+            BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.account_tree,
+                  size: 25,
+                  color: Colors.greenAccent,
+                ),
+                label: "Tree"),
+            BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.account_tree,
+                  size: 25,
+                  color: Colors.greenAccent,
+                ),label: "Tree"),
+          ]),
           drawer: Drawer(
             child: ListView(
               children: [
-                DrawerHeader(child: Row(
+                DrawerHeader(
+                    child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Icon(Icons.settings,size: 25,color: Colors.black,),
-                    Icon(Icons.access_alarm_sharp,size: 25,color: Colors.blueAccent,)
+                    Icon(
+                      Icons.settings,
+                      size: 25,
+                      color: Colors.black,
+                    ),
+                    Icon(
+                      Icons.access_alarm_sharp,
+                      size: 25,
+                      color: Colors.blueAccent,
+                    )
                   ],
                 )),
                 ListTile(
